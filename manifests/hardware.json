@@ -1,0 +1,35 @@
+{
+  "main": {
+    "role": "distributed Prefill host and state sender",
+    "cpu": "Intel Core Ultra 7 265K",
+    "ram_bytes": null,
+    "gpu": "NVIDIA GeForce RTX 4070 Ti SUPER",
+    "gpu_vram_nominal_gib": 16,
+    "os_family": "Windows",
+    "os_build": null
+  },
+  "sub": {
+    "role": "remote CUDA RPC device",
+    "cpu": null,
+    "ram_bytes": null,
+    "gpu": "NVIDIA GeForce GTX 1660",
+    "gpu_vram_nominal_gib": 6,
+    "os_family": "Windows",
+    "os_build": null
+  },
+  "m6": {
+    "role": "CPU/RAM-only Decode node",
+    "device": "GMKtec M6",
+    "cpu": "AMD Ryzen 5 7640HS",
+    "logical_processors": 12,
+    "ram_nominal_gib": 48,
+    "os_family": "Windows",
+    "os_build": null
+  },
+  "not_captured": [
+    "Exact Windows editions and build numbers",
+    "Main and SUB installed RAM",
+    "NVIDIA driver version",
+    "NIC model and negotiated link speed"
+  ]
+}

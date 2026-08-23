@@ -1,0 +1,43 @@
+{
+    "schema_version":  1,
+    "case":  "16k",
+    "prompt_tokens":  16000,
+    "generation_tokens":  2048,
+    "model_sha256":  "0d003f6662faee786ed5da3e31b29c978de5ae5d275c8794c606a7f3c01aa8f5",
+    "llama_build":  10107,
+    "llama_commit":  "c0bc8591e8815c63cb01dd3f051a8b0df02501c9",
+    "source_sessions":  {
+                            "prefill_save":  "longsuite-20260820T151318Z",
+                            "transfer_restore":  "long-records-16k-20260820T161733Z-877dae83",
+                            "exact_2048_protocol":  "llama-pd-local-rerun-v1",
+                            "exact_2048_completed_utc":  "2026-08-20T16:36:13.8387090Z"
+                        },
+    "timing_qualification":  "Composite measured-component total: Prefill/save/transfer from the original linked session plus Restore/Decode from the exact-2048 M6 local rerun. Not one uninterrupted client wall clock.",
+    "artifacts":  [
+                      {
+                          "path":  "results/16k/benchmark-b-normal-rpc.json",
+                          "bytes":  7818,
+                          "sha256":  "3234c8330b5601fdfb3c6d4e68e1e1636f5e95e7f64cf589ebb50c04e185d6f9"
+                      },
+                      {
+                          "path":  "results/16k/prefill-save.json",
+                          "bytes":  4560,
+                          "sha256":  "d9e91d5b6e8850d0c498b46263c2cf8b66c8d3ca20dc2e26bea7144101cd78e0"
+                      },
+                      {
+                          "path":  "results/16k/original-transfer-restore.json",
+                          "bytes":  6029,
+                          "sha256":  "568fcbe3fde61c1ab8e30b198b2a78a44183009b014904b1ec1af59f43f964a3"
+                      },
+                      {
+                          "path":  "results/16k/m6-restore-decode.json",
+                          "bytes":  8374,
+                          "sha256":  "8d9a5c6383dd56b4c07b1810ba9765180b2b5ec651ae8bdab7badf86afa61eac"
+                      },
+                      {
+                          "path":  "prompts/records-16k.txt",
+                          "bytes":  56567,
+                          "sha256":  "70ef10895e5d2c7ceb8ee74ff7c3d4302f1a13ebafdb11f5236fec7e7286b8cb"
+                      }
+                  ]
+}

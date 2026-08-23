@@ -1,0 +1,11 @@
+{
+  "repository": "Qwen/Qwen3-30B-A3B-GGUF",
+  "repository_url": "https://huggingface.co/Qwen/Qwen3-30B-A3B-GGUF",
+  "filename": "Qwen3-30B-A3B-Q4_K_M.gguf",
+  "architecture": "qwen3moe",
+  "quantization": "Q4_K_M",
+  "bytes": 18556685824,
+  "sha256": "0d003f6662faee786ed5da3e31b29c978de5ae5d275c8794c606a7f3c01aa8f5",
+  "redistributed_here": false,
+  "notes": "The 4K and 16K published results use this Q4_K_M file, not the initially considered Q6_K file."
+}

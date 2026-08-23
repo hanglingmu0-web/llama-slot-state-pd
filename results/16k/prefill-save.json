@@ -1,0 +1,82 @@
+{
+    "suite_id":  "longsuite-20260820T151318Z",
+    "pattern_id":  "records-16k",
+    "model":  "large",
+    "context_size":  40960,
+    "prompt_sha256":  "70ef10895e5d2c7ceb8ee74ff7c3d4302f1a13ebafdb11f5236fec7e7286b8cb",
+    "prompt_evaluated_tokens":  16000,
+    "prompt_wall_ms":  388938.326,
+    "completion_timings":  {
+                               "cache_n":  0,
+                               "prompt_n":  16000,
+                               "prompt_ms":  388924.192,
+                               "prompt_per_token_ms":  24.307762,
+                               "prompt_per_second":  41.13912255681951,
+                               "predicted_n":  1,
+                               "predicted_ms":  0.001,
+                               "predicted_per_token_ms":  0.001,
+                               "predicted_per_second":  1000000.0
+                           },
+    "slot_file":  "long-records-16k-longsuite-20260820T151318Z.bin",
+    "n_saved":  16000,
+    "n_written":  1573121180,
+    "save_ms":  843.698,
+    "save_wall_ms":  846.064,
+    "state_file_bytes":  1573121180,
+    "state_file_sha256":  "e443bd56caa2706a2efbb3b3d5177c23a0b3299db649db4900f446763f68e3d9",
+    "server_alive_after_save":  true,
+    "rpc_session_clean_after_save":  true,
+    "before_safety":  {
+                          "label":  "before-C-prefill-records-16k-longsuite-20260820T151318Z",
+                          "captured_utc":  "2026-08-20T15:30:48.5068968Z",
+                          "memory":  {
+                                         "total_bytes":  33701502976,
+                                         "available_bytes":  17544224768,
+                                         "total_gib":  31.387,
+                                         "available_gib":  16.339,
+                                         "load_percent":  47
+                                     },
+                          "local_gpus":  {
+                                             "index":  0,
+                                             "name":  "NVIDIA GeForce RTX 4070 Ti SUPER",
+                                             "total_mib":  16376,
+                                             "used_mib":  14807,
+                                             "free_mib":  1255,
+                                             "temperature_c":  35,
+                                             "utilization_percent":  13
+                                         },
+                          "event_markers":  {
+                                                "Microsoft-Windows-WHEA-Logger":  24442,
+                                                "Display":  0,
+                                                "nvlddmkm":  19163,
+                                                "LiveKernelEvent141":  7302
+                                            }
+                      },
+    "after_safety":  {
+                         "label":  "after-C-save-records-16k-longsuite-20260820T151318Z",
+                         "captured_utc":  "2026-08-20T15:37:19.7717171Z",
+                         "memory":  {
+                                        "total_bytes":  33701502976,
+                                        "available_bytes":  16227647488,
+                                        "total_gib":  31.387,
+                                        "available_gib":  15.113,
+                                        "load_percent":  51
+                                    },
+                         "local_gpus":  {
+                                            "index":  0,
+                                            "name":  "NVIDIA GeForce RTX 4070 Ti SUPER",
+                                            "total_mib":  16376,
+                                            "used_mib":  14780,
+                                            "free_mib":  1282,
+                                            "temperature_c":  34,
+                                            "utilization_percent":  10
+                                        },
+                         "event_markers":  {
+                                               "Microsoft-Windows-WHEA-Logger":  24442,
+                                               "Display":  0,
+                                               "nvlddmkm":  19163,
+                                               "LiveKernelEvent141":  7302
+                                           }
+                     },
+    "completed_utc":  "2026-08-20T15:37:19.9224767Z"
+}

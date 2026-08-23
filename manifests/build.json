@@ -1,0 +1,32 @@
+{
+  "llama_cpp": {
+    "build": 10107,
+    "commit": "c0bc8591e8815c63cb01dd3f051a8b0df02501c9",
+    "rpc_protocol": "4.0.3"
+  },
+  "nodes": {
+    "main": {
+      "os_family": "Windows",
+      "target": "Windows x86_64",
+      "compiler": "Clang 20.1.8",
+      "version_output_verified": true,
+      "binary_sha256": null
+    },
+    "sub": {
+      "os_family": "Windows",
+      "expected_build": 10107,
+      "expected_commit": "c0bc8591e8815c63cb01dd3f051a8b0df02501c9",
+      "expected_rpc_protocol": "4.0.3",
+      "version_output_verified_for_public_package": false,
+      "binary_sha256": null
+    },
+    "m6": {
+      "os_family": "Windows",
+      "build": 10107,
+      "commit": "c0bc8591e8815c63cb01dd3f051a8b0df02501c9",
+      "version_output_verified": true,
+      "binary_sha256": null
+    }
+  },
+  "reproduction_gate": "Capture and add per-node executable/DLL hashes before claiming binary-identical reproduction."
+}

@@ -1,0 +1,88 @@
+{
+    "protocol":  "llama-pd-local-rerun-v1",
+    "source_session_id":  "long-records-16k-20260820T161733Z-877dae83",
+    "ok":  true,
+    "context_size":  32768,
+    "requested_n_predict":  2048,
+    "state":  {
+                  "path":  "${M6_PD_ROOT}\\slots\\long-records-16k-20260820T161733Z-877dae83-state.bin",
+                  "bytes":  1573121180,
+                  "sha256":  "e443bd56caa2706a2efbb3b3d5177c23a0b3299db649db4900f446763f68e3d9",
+                  "reparse":  false
+              },
+    "prompt":  {
+                   "path":  "${M6_PD_ROOT}\\prompts\\long-records-16k-20260820T161733Z-877dae83-prompt.txt",
+                   "bytes":  56567,
+                   "sha256":  "70ef10895e5d2c7ceb8ee74ff7c3d4302f1a13ebafdb11f5236fec7e7286b8cb",
+                   "reparse":  false
+               },
+    "restore":  {
+                    "http_status":  200,
+                    "n_restored":  16000,
+                    "n_read":  1573121180,
+                    "restore_ms":  424.772,
+                    "erase":  {
+                                  "id_slot":  0,
+                                  "n_erased":  0
+                              },
+                    "slots":  {
+                                  "value":  {
+                                                "id":  0,
+                                                "n_ctx":  32768,
+                                                "speculative":  false,
+                                                "is_processing":  false
+                                            },
+                                  "Count":  1
+                              }
+                },
+    "decode":  {
+                   "http_status":  200,
+                   "cache_n":  15999,
+                   "prompt_n":  1,
+                   "predicted_n":  2048,
+                   "exact_2048":  true,
+                   "prompt_ms":  194.094,
+                   "predicted_ms":  406963.027,
+                   "predicted_per_second":  5.032398188840875,
+                   "ttft_ms":  350.031,
+                   "wall_ms":  407413.153,
+                   "stop":  true,
+                   "stop_type":  "limit",
+                   "minimum_available_ram_gib":  13.688,
+                   "maximum_working_set_bytes":  21857996800,
+                   "server_cpu_seconds":  2423.594,
+                   "output":  "\u003cthink\u003e\nOkay, let\u0027s tackle this query. The user provided a long list of records with specific formats and wants a Japanese synthesis. The instructions mention including chronology, five quantified changes, two contradictions, and one practical recommendation. Also, they mentioned not to omit late records. \n\nFirst, I need to parse all the records. Each record has a timestamp, team, action, observation number, delta, checkpoint, and batch. The key is to track the chronological order and identify patterns.\n\nStarting with the first record, 00001 at minute 17, and so on. The chronology is straightforward since the minutes are in order. But I need to check if there are any overlaps or inconsistencies in the timeline.\n\nNext, quantified changes. The user wants five. Looking at the delta values, which are numerical changes. Maybe track the maximum and minimum deltas, or the total changes over time. For example, the delta ranges from -89 to +88. Also, the observation numbers go up to 999, then reset? Wait, looking at the observations: 038, 075, 112, 149, etc., up to 999, then 036, 073, etc. So maybe there\u0027s a cycle or a pattern in the observations.\n\nFor contradictions, I need to find two instances where the data conflicts. Maybe two records with the same checkpoint but different deltas or observations? Or conflicting actions? For example, if two teams did the same action at the same time with different results.\n\nPractical recommendation: Based on the data, maybe suggest a protocol for handling delta changes or improving validation processes.\n\nNow, the user mentioned \"tail calibration markers\" which are x\u0027s. Not sure what that refers to, but maybe it\u0027s a placeholder for something else. The user might have intended to include some markers, but since they\u0027re not specified, I\u0027ll focus on the main task.\n\nI need to ensure that all late records are included. The last record is 00232, so the synthesis should cover up to that. \n\nLet me start by listing the chronology. The records are in order from 00001 to 00232, each with a minute timestamp. The minutes go from 17, 34, 51, 08, etc., which seems like they\u0027re in a 60-minute cycle. Each record is 17 minutes apart? Wait, looking at the minutes: 17, 34, 51, 08, 25, 42, 59, 16, 33, 50, 07, 24, 41, 58, 15, 32, 49, 06, 23, 40, 57, 14, 31, 48, 05, 22, 39, 56, 13, 30, 47, 04, 21, 38, 55, 12, 29, 46, 03, 20, 37, 54, 11, 28, 45, 02, 19, 36, 53, 10, 27, 44, 01, 18, 35, 52, 09, 26, 43, 00, etc. So it\u0027s a cycle of 60 minutes, with each record every 17 minutes? Wait, 17, 34 (17+17), 51 (34+17), then 08 (51+17=68, but 08 is 8, which is 68-60=8). So it\u0027s a 60-minute cycle, with each record every 17 minutes. So the pattern repeats every 60 minutes. That\u0027s an important point for the chronology.\n\nNow, quantified changes: Let\u0027s look at the deltas. The deltas range from -89 to +88. The maximum delta is +88 (record 00001: delta +26, but later records have higher. For example, record 00011: delta +48, 00012: +77, 00013: -75, 00014: -46, 00015: -17, 00016: +12, 00017: +41, 00018: +70, 00019: -82, 00020: -53, 00021: -24, 00022: +5, 00023: +34, 00024: +63, 00025: -89, 00026: -60, 00027: -31, 00028: -2, 00029: +27, 00030: +56, 00031: +85, 00032: -67, 00033: -38, 00034: -9, 00035: +20, 00036: +49, 00037: +78, 00038: -74, 00039: -45, 00040: -16, 00041: +13, 00042: +42, 00043: +71, 00044: -81, 00045: -52, 00046: -23, 00047: +6, 00048: +35, 00049: +64, 00050: -88, 00051: -59, 00052: -30, 00053: -1, 00054: +28, 00055: +57, 00056: +86, 00057: -66, 00058: -37, 00059: -8, 00060: +21, 00061: +50, 00062: +79, 00063: -73, 00064: -44, 00065: -15, 00066: +14, 00067: +43, 00068: +72, 00069: -80, 00070: -51, 00071: -22, 00072: +7, 00073: +36, 00074: +65, 00075: -87, 00076: -58, 00077: -29, 00078: 0, 00079: +29, 00080: +58, 00081: +87, 00082: -65, 00083: -36, 00084: -7, 00085: +22, 00086: +51, 00087: +80, 00088: -72, 00089: -43, 00090: -14, 00091: +15, 00092: +44, 00093: +73, 00094: -79, 00095: -50, 00096: -21, 00097: +8, 00098: +37, 00099: +66, 00100: -86, 00101: -57, 00102: -28, 00103: +1, 00104: +30, 00105: +59, 00106: +88, 00107: -64, 00108: -35, 00109: -6, 00110: +23, 00111: +52, 00112"
+               },
+    "m6":  {
+               "server_pid":  6928,
+               "server_path":  "${M6_PD_ROOT}\\bin\\llama-server.exe",
+               "command":  "\"${M6_PD_ROOT}\\bin\\llama-server.exe\" -m ${M6_PD_ROOT}\\models\\Qwen3-30B-A3B-Q4_K_M.gguf --n-gpu-layers 0 --no-kv-offload --cache-ram 0 --parallel 1 --slot-save-path ${M6_PD_ROOT}\\slots --slots --ctx-size 32768 --cache-type-k f16 --cache-type-v f16 --flash-attn off --host 127.0.0.1 --port 18082 --log-verbosity 4 --load-mode none ",
+               "cpu_only":  true,
+               "available_ram_before_decode_gib":  13.827,
+               "available_ram_after_decode_gib":  13.753
+           },
+    "protected_rpc":  {
+                          "pid":  10992,
+                          "path":  "${M6_RPC_ROOT}\\ggml-rpc-server.exe",
+                          "start_time":  "2026-08-20T17:22:21.6773644+09:00",
+                          "endpoint":  "${M6_IP}:50052",
+                          "unchanged":  true
+                      },
+    "event_baseline":  {
+                           "Microsoft-Windows-WHEA-Logger":  0,
+                           "Display":  0,
+                           "nvlddmkm":  0,
+                           "LiveKernelEvent141":  0
+                       },
+    "event_final":  {
+                        "Microsoft-Windows-WHEA-Logger":  0,
+                        "Display":  0,
+                        "nvlddmkm":  0,
+                        "LiveKernelEvent141":  0
+                    },
+    "error_matches":  {
+
+                      },
+    "verdict":  "PD_CACHE_REUSE_EXACT_2048_SUCCESS",
+    "completed_utc":  "2026-08-20T16:36:13.8387090Z"
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "confirmed": false,
+  "network": {
+    "main_ip": "192.168.1.10",
+    "sub_ip": "192.168.1.11",
+    "m6_ip": "192.168.1.12",
+    "rpc_port": 50052,
+    "prefill_http_port": 18081,
+    "decode_http_port": 18082,
+    "state_transfer_port": 18083
+  },
+  "llama_cpp": {
+    "build": 10107,
+    "commit": "c0bc8591e8815c63cb01dd3f051a8b0df02501c9",
+    "rpc_protocol": "4.0.3"
+  },
+  "model": {
+    "repository": "Qwen/Qwen3-30B-A3B-GGUF",
+    "filename": "Qwen3-30B-A3B-Q4_K_M.gguf",
+    "bytes": 18556685824,
+    "sha256": "0d003f6662faee786ed5da3e31b29c978de5ae5d275c8794c606a7f3c01aa8f5"
+  },
+  "main": {
+    "llama_server": "C:\\llama-slot-state-pd\\bin-main\\llama-server.exe",
+    "model_path": "D:\\models\\Qwen3-30B-A3B-Q4_K_M.gguf",
+    "runtime_root": "C:\\llama-slot-state-pd\\runtime-main",
+    "slots_root": "C:\\llama-slot-state-pd\\runtime-main\\slots",
+    "logs_root": "C:\\llama-slot-state-pd\\runtime-main\\logs",
+    "outputs_root": "C:\\llama-slot-state-pd\\runtime-main\\outputs"
+  },
+  "sub": {
+    "rpc_server": "C:\\llama-slot-state-pd\\bin-sub\\ggml-rpc-server.exe",
+    "runtime_root": "C:\\llama-slot-state-pd\\runtime-sub",
+    "logs_root": "C:\\llama-slot-state-pd\\runtime-sub\\logs"
+  },
+  "m6": {
+    "llama_server": "C:\\llama-slot-state-pd\\bin-m6\\llama-server.exe",
+    "model_path": "D:\\models\\Qwen3-30B-A3B-Q4_K_M.gguf",
+    "repo_root": "C:\\llama-slot-state-pd\\repo",
+    "runtime_root": "C:\\llama-slot-state-pd\\runtime-m6",
+    "slots_root": "C:\\llama-slot-state-pd\\runtime-m6\\slots",
+    "logs_root": "C:\\llama-slot-state-pd\\runtime-m6\\logs",
+    "outputs_root": "C:\\llama-slot-state-pd\\runtime-m6\\outputs"
+  },
+  "prefill": {
+    "context_size": 40960,
+    "n_gpu_layers": 49,
+    "tensor_split": "1,3",
+    "cache_type_k": "f16",
+    "cache_type_v": "f16"
+  },
+  "decode": {
+    "context_size": 32768,
+    "n_predict": 2048,
+    "cache_type_k": "f16",
+    "cache_type_v": "f16"
+  },
+  "cases": {
+    "4k": {
+      "prompt_relative_path": "prompts/records-4k.txt",
+      "prompt_tokens": 4000,
+      "prompt_bytes": 14235,
+      "prompt_sha256": "eb62156bf168ed142135fd7916c723c8caa4a6f010c474eb6fb8e37dbd011e4d",
+      "state_filename": "slot-state-4k.bin"
+    },
+    "16k": {
+      "prompt_relative_path": "prompts/records-16k.txt",
+      "prompt_tokens": 16000,
+      "prompt_bytes": 56567,
+      "prompt_sha256": "70ef10895e5d2c7ceb8ee74ff7c3d4302f1a13ebafdb11f5236fec7e7286b8cb",
+      "state_filename": "slot-state-16k.bin"
+    }
+  },
+  "safety": {
+    "minimum_available_ram_gib": 6,
+    "minimum_free_vram_mib": 512,
+    "maximum_gpu_temperature_c": 80
+  }
+}

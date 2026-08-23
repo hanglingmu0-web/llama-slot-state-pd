@@ -1,0 +1,24 @@
+{
+  "selected_configuration": {
+    "split_mode": "layer",
+    "tensor_split": "1,3",
+    "n_gpu_layers": 49,
+    "context_size": 40960
+  },
+  "measured_model_buffers_mib": {
+    "CUDA0_RTX_4070_Ti_SUPER": 12769.53,
+    "RPC0_GTX_1660": 4754.91,
+    "CPU_host": 0.0
+  },
+  "kv_placement": {
+    "host_cpu": true,
+    "cuda_or_rpc_detected": false
+  },
+  "post_load_safety": {
+    "main_available_ram_gib": 17.752,
+    "main_cuda0_free_vram_mib": 1339,
+    "main_cuda0_temperature_c": 35,
+    "rpc0_reported_free_vram_after_registration_mib": 5108
+  },
+  "qualification": "The final selected 4K/16K runs did not place model tensor weights in Main host RAM. Main RAM held host-side KV/state/runtime data."
+}

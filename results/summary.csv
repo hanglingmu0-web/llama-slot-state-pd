@@ -1,0 +1,3 @@
+"case","prompt_tokens","generation_tokens","normal_rpc_prefill_tps","pd_prefill_tps","normal_rpc_decode_tps","m6_decode_tps","state_bytes","state_transfer_s","restore_ms","cache_n","prompt_n","m6_ttft_ms","m6_decode_wall_s","normal_rpc_total_s","pd_component_total_s","continuous_end_to_end_wall","output_quality"
+"4k","4000","2048","60.86865","62.583465","5.000774","10.959625","393281180","4.743025","133.53","3999","1","201.144","262.674544","475.263493","331.762561","False","Japanese final response reached"
+"16k","16000","2048","40.872818","41.139123","3.488489","5.032398","1573121180","18.287224","424.772","15999","1","350.031","407.413153","978.554932","815.933453","False","2,048 tokens ended inside English think output"

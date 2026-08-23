@@ -1,0 +1,92 @@
+{
+    "protocol":  "llama-pd-bundle-v1",
+    "session_id":  "long-records-16k-20260820T161733Z-877dae83",
+    "ok":  true,
+    "model":  {
+                  "path":  "${M6_PD_ROOT}\\models\\Qwen3-30B-A3B-Q4_K_M.gguf",
+                  "bytes":  18556685824,
+                  "sha256":  "0d003f6662faee786ed5da3e31b29c978de5ae5d275c8794c606a7f3c01aa8f5",
+                  "cpu_only":  true
+              },
+    "state_transfer":  {
+                           "path":  "${M6_PD_ROOT}\\slots\\long-records-16k-20260820T161733Z-877dae83-state.bin",
+                           "bytes":  1573121180,
+                           "sha256":  "e443bd56caa2706a2efbb3b3d5177c23a0b3299db649db4900f446763f68e3d9",
+                           "started_utc":  "2026-08-20T16:17:35.0078523Z",
+                           "ended_utc":  "2026-08-20T16:17:53.2950768Z",
+                           "seconds":  18.287224,
+                           "effective_mib_per_second":  82.038
+                       },
+    "prompt_transfer":  {
+                            "path":  "${M6_PD_ROOT}\\prompts\\long-records-16k-20260820T161733Z-877dae83-prompt.txt",
+                            "bytes":  56567,
+                            "sha256":  "70ef10895e5d2c7ceb8ee74ff7c3d4302f1a13ebafdb11f5236fec7e7286b8cb",
+                            "started_utc":  "2026-08-20T16:17:53.3038974Z",
+                            "ended_utc":  "2026-08-20T16:17:53.3301776Z",
+                            "seconds":  0.02628,
+                            "effective_mib_per_second":  2.053
+                        },
+    "restore":  {
+                    "phase":  "restore",
+                    "ok":  true,
+                    "http_status":  200,
+                    "n_restored":  16000,
+                    "n_read":  1573121180,
+                    "restore_ms":  571.063,
+                    "erase":  {
+                                  "id_slot":  0,
+                                  "n_erased":  8252
+                              }
+                },
+    "decode":  {
+                   "http_status":  200,
+                   "cache_n":  15999,
+                   "prompt_n":  1,
+                   "predicted_n":  384,
+                   "prompt_ms":  272.07,
+                   "prompt_per_second":  3.675524681148234,
+                   "predicted_ms":  73459.653,
+                   "predicted_per_second":  5.227359296129537,
+                   "ttft_ms":  418.055,
+                   "wall_ms":  74003.595,
+                   "cache_fraction_percent":  99.99375,
+                   "full_prefill_repeated":  false,
+                   "minimum_available_ram_gib":  14.82,
+                   "maximum_working_set_bytes":  15962951680,
+                   "output":  "\u003cthink\u003e\nOkay, let\u0027s tackle this query. The user provided a long list of records with specific formats and wants a Japanese synthesis. The instructions mention including chronology, five quantified changes, two contradictions, and one practical recommendation. Also, they mentioned not to omit late records. \n\nFirst, I need to parse all the records. Each record has a timestamp, team, action, observation number, delta, checkpoint, and batch. The key is to track the chronological order and identify patterns.\n\nStarting with the first record, 00001 at minute 17, and so on. The chronology is straightforward since the minutes are in order. But I need to check if there are any overlaps or inconsistencies in the timeline.\n\nNext, quantified changes. The user wants five. Looking at the delta values, which are numerical changes. Maybe track the maximum and minimum deltas, or the total changes over time. For example, the delta ranges from -89 to +88. Also, the observation numbers go up to 999, then reset? Wait, looking at the observations: 038, 075, 112, 149, etc., up to 999, then 036, 073, etc. So maybe there\u0027s a cycle or a pattern in the observations.\n\nFor contradictions, I need to find two instances where the data conflicts. Maybe two records with the same checkpoint but different deltas or observations? Or conflicting actions? For example, if two teams did the same action at the same time with different results.\n\nPractical recommendation: Based on the data, maybe suggest a protocol for handling delta changes or improving validation processes.\n\nNow, the user mentioned \"tail calibration markers\" which are x\u0027s. Not sure what that refers to, but maybe it\u0027s a placeholder for something else. The",
+                   "japanese_output_detected":  false,
+                   "stop":  true,
+                   "stop_type":  "limit"
+               },
+    "m6":  {
+               "server_pid":  1736,
+               "server_path":  "${M6_PD_ROOT}\\bin\\llama-server.exe",
+               "available_ram_before_decode_gib":  15.085,
+               "available_ram_after_decode_gib":  15.048,
+               "working_set_before_bytes":  13186260992,
+               "working_set_after_bytes":  15962951680
+           },
+    "protected_rpc":  {
+                          "pid":  10992,
+                          "path":  "${M6_RPC_ROOT}\\ggml-rpc-server.exe",
+                          "start_time":  "2026-08-20T17:22:21.6773644+09:00",
+                          "endpoint":  "${M6_IP}:50052"
+                      },
+    "event_baseline":  {
+                           "Microsoft-Windows-WHEA-Logger":  0,
+                           "Display":  0,
+                           "nvlddmkm":  0,
+                           "LiveKernelEvent141":  0
+                       },
+    "event_final":  {
+                        "Microsoft-Windows-WHEA-Logger":  0,
+                        "Display":  0,
+                        "nvlddmkm":  0,
+                        "LiveKernelEvent141":  0
+                    },
+    "error_matches":  {
+
+                      },
+    "verdict":  "PD_CACHE_REUSE_SUCCESS",
+    "completed_utc":  "2026-08-20T16:19:08.2887852Z"
+}
