@@ -1,6 +1,6 @@
-# llama.cpp Slot-State PD PoC
+# llama.cpp Slot-State PD PoC — RPC Distributed Prefill + Disaggregated Decode
 
-## Externally Orchestrated Distributed Prefill to CPU-Only Decode
+## Externally Orchestrated Distributed Prefill (multi-machine RPC) → CPU-only Decode
 
 **Status: Experimental PoC v0.2 / reproduction package included**
 
